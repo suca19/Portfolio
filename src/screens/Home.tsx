@@ -110,22 +110,21 @@ export default function Homepage() {
           <div className="relative overflow-hidden rounded-[2.5rem] border border-stone-200 bg-stone-900 p-6 text-white shadow-[0_40px_100px_rgba(28,25,23,0.18)]">
             <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-stone-300">
               <span>Portfolio</span>
-              <span>2026</span>
             </div>
 
             <div className="mt-8 flex items-center justify-between gap-6">
               <div className="space-y-3">
                 <p className="text-sm uppercase tracking-[0.25em] text-stone-400">Based in</p>
-                <p className="text-2xl font-medium tracking-[-0.06em]">Dublin, Ireland</p>
+                <p className="text-2xl font-medium tracking-[-0.06em]">Ireland, Dublin</p>
               </div>
             </div>
 
             <div className="mt-10 rounded-[2rem] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-              <p className="text-xs uppercase tracking-[0.3em] text-stone-400">Focus</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-stone-400">Focus on</p>
               <p className="mt-3 text-2xl font-medium leading-tight tracking-[-0.06em]">
-                Clean systems.<br />
-                Practical delivery.<br />
-                Reliable software.
+                Clean systems<br />
+                Practical delivery<br />
+                Reliable software
               </p>
             </div>
           </div>
