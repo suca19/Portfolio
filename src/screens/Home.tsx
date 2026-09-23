@@ -1,63 +1,69 @@
+import { Link } from "react-router-dom";
+
+const base = import.meta.env.BASE_URL;
+
 type TechItem = {
-  name: string
-  image?: string
-  label?: string
-}
+  name: string;
+  image?: string;
+  label?: string;
+};
 
 type TechGroup = {
-  title: string
-  description: string
-  items: TechItem[]
-}
+  title: string;
+  description: string;
+  items: TechItem[];
+};
 
 const techGroups: TechGroup[] = [
   {
-    title: 'Frontend',
-    description: 'Interfaces, responsive layouts, and clear user experiences.',
+    title: "Frontend",
+    description: "Interfaces, responsive layouts, and clear user experiences.",
     items: [
-      { name: 'React', image: '/frontend/react.png' },
-      { name: 'TypeScript', image: '/frontend/typescript.png' },
-      { name: 'JavaScript', image: '/frontend/JavaScript.png' },
-      { name: 'HTML5', image: '/frontend/html.jpeg' },
-      { name: 'CSS3', image: '/frontend/css.png' },
-      { name: 'Tailwind CSS', image: '/frontend/tailwind.png' },
-      { name: 'React Native', image: '/frontend/react-native.png' },
+      { name: "React", image: `${base}frontend/react.png` },
+      { name: "TypeScript", image: `${base}frontend/typescript.png` },
+      { name: "JavaScript", image: `${base}frontend/JavaScript.png` },
+      { name: "HTML5", image: `${base}frontend/html.jpeg` },
+      { name: "CSS3", image: `${base}frontend/css.png` },
+      { name: "Tailwind CSS", image: `${base}frontend/tailwind.png` },
+      { name: "React Native", image: `${base}frontend/react-native.png` },
     ],
   },
   {
-    title: 'Backend',
-    description: 'APIs, database-driven features, and application logic.',
+    title: "Backend",
+    description: "APIs, database-driven features, and application logic.",
     items: [
-      { name: 'Node.js', image: '/backend/nodejs.png' },
-      { name: 'PHP', image: '/backend/php.png' },
-      { name: 'Laravel', image: '/backend/laravel.png' },
-      { name: 'Django', image: '/backend/django.png' },
-      { name: 'Java', image: '/backend/java.png' },
-      { name: 'Spring', image: '/backend/spring.jpg' },
+      { name: "Node.js", image: `${base}backend/nodejs.png` },
+      { name: "PHP", image: `${base}backend/php.png` },
+      { name: "Laravel", image: `${base}backend/laravel.png` },
+      { name: "Django", image: `${base}backend/django.png` },
+      { name: "Java", image: `${base}backend/java.png` },
+      { name: "Spring", image: `${base}backend/spring.jpg` },
     ],
   },
   {
-    title: 'Developer Tools',
-    description: 'Version control, containers, and working in Linux-based environments.',
+    title: "Developer Tools",
+    description:
+      "Version control, containers, and working in Linux-based environments.",
     items: [
-      { name: 'Git', image: '/tools/git.png' },
-      { name: 'Docker', image: '/tools/docker.png' },
-      { name: 'Linux', image: '/tools/linux.jpeg' },
-      { name: 'Cisco', image: '/tools/cisco.png' },
-      { name: 'CI/CD', image: '/tools/ci-cd.jpeg' },
+      { name: "Git", image: `${base}tools/git.png` },
+      { name: "Docker", image: `${base}tools/docker.png` },
+      { name: "Linux", image: `${base}tools/linux.jpeg` },
+      { name: "Cisco", image: `${base}tools/cisco.png` },
+      { name: "CI/CD", image: `${base}tools/ci-cd.jpeg` },
     ],
   },
   {
-    title: 'AI & Workflow',
-    description: 'AI-assisted development, prompt workflows, and productivity tools.',
+    title: "AI & Workflow",
+    description:
+      "AI-assisted development, prompt workflows, and productivity tools.",
     items: [
-      { name: 'GitHub Copilot', image: '/ai/github-copilot.jpeg' },
-      { name: 'Claude Code', image: '/ai/claude.png' },
-      { name: 'MCP', image: '/ai/mcp.png' },
-      { name: 'Prompt Engineering', image: '/ai/prompt-engineering.png' },
+      { name: "GitHub Copilot", image: `${base}ai/github-copilot.jpeg` },
+      { name: "Claude Code", image: `${base}ai/claude.png` },
+      { name: "MCP", image: `${base}ai/mcp.png` },
+      { name: "Prompt Engineering", image: `${base}ai/prompt-engineering.png` },
     ],
   },
-]
+];
 
 export default function Homepage() {
   return (
@@ -74,32 +80,36 @@ export default function Homepage() {
           </h1>
 
           <div className="mt-8 rounded-[2rem] border border-stone-200 bg-white/70 p-6 shadow-[0_30px_80px_rgba(28,25,23,0.08)] backdrop-blur-sm">
-            <p className="text-sm uppercase tracking-[0.25em] text-stone-500">Who I am</p>
+            <p className="text-sm uppercase tracking-[0.25em] text-stone-500">
+              Who I am
+            </p>
             <p className="mt-4 text-lg leading-relaxed text-stone-700">
-              I am a final-year Computing student and Junior Full-Stack Developer with hands-on
-              experience building web and mobile applications. I focus on scalable, maintainable
-              software, database-driven features, and collaborative delivery. I also work with
-              AI-assisted development tools and agentic workflows to improve speed, quality, and
-              implementation clarity.
+              I am a final-year Computing student and Junior Full-Stack
+              Developer with hands-on experience building web and mobile
+              applications. I focus on scalable, maintainable software,
+              database-driven features, and collaborative delivery. I also work
+              with AI-assisted development tools and agentic workflows to
+              improve speed, quality, and implementation clarity.
             </p>
             <p className="mt-4 text-xs uppercase tracking-[0.3em] text-stone-500">
-              Full-stack development • APIs • Databases • Collaboration • AI-assisted workflows
+              Full-stack development • APIs • Databases • Collaboration •
+              AI-assisted workflows
             </p>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-stone-700"
             >
               View projects
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="rounded-full border border-stone-300 bg-transparent px-6 py-3 text-sm font-medium text-stone-800 transition hover:border-stone-900"
             >
               Let&apos;s talk
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -114,16 +124,24 @@ export default function Homepage() {
 
             <div className="mt-8 flex items-center justify-between gap-6">
               <div className="space-y-3">
-                <p className="text-sm uppercase tracking-[0.25em] text-stone-400">Based in</p>
-                <p className="text-2xl font-medium tracking-[-0.06em]">Ireland, Dublin</p>
+                <p className="text-sm uppercase tracking-[0.25em] text-stone-400">
+                  Based in
+                </p>
+                <p className="text-2xl font-medium tracking-[-0.06em]">
+                  Ireland, Dublin
+                </p>
               </div>
             </div>
 
             <div className="mt-10 rounded-[2rem] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-              <p className="text-xs uppercase tracking-[0.3em] text-stone-400">Focus on</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-stone-400">
+                Focus on
+              </p>
               <p className="mt-3 text-2xl font-medium leading-tight tracking-[-0.06em]">
-                Clean systems<br />
-                Practical delivery<br />
+                Clean systems
+                <br />
+                Practical delivery
+                <br />
                 Reliable software
               </p>
             </div>
@@ -152,7 +170,9 @@ export default function Homepage() {
                   <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-400">
                     {group.title}
                   </p>
-                  <p className="mt-3 text-sm leading-6 text-stone-600">{group.description}</p>
+                  <p className="mt-3 text-sm leading-6 text-stone-600">
+                    {group.description}
+                  </p>
                 </div>
 
                 <div className="mt-6 flex flex-wrap gap-3">
@@ -174,7 +194,9 @@ export default function Homepage() {
                           </span>
                         )}
                       </div>
-                      <span className="text-sm font-medium text-stone-800">{item.name}</span>
+                      <span className="text-sm font-medium text-stone-800">
+                        {item.name}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -184,5 +206,5 @@ export default function Homepage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

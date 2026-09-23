@@ -13,7 +13,7 @@ if (redirectedPath) {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio/">
       <App />
     </BrowserRouter>
   </StrictMode>,
